@@ -1,4 +1,4 @@
-function [modularity, nCommunity,meanCommuntiySize,stationarity] = multiSliceCommunityStats(A,gplus,gminus,omega,varargin)
+function [modularity, nCommunity,meanCommuntiySize,stationarity,S] = multiSliceCommunityStats(A,gplus,gminus,omega,varargin)
 %% parameters and Output:
 %  A                 : cell array
 %  Modularity        : the value of the modularity function
@@ -7,6 +7,7 @@ function [modularity, nCommunity,meanCommuntiySize,stationarity] = multiSliceCom
 %                      windows over which the community exists
 %  Stationarity      : for a given module C, zeta_C is the average correlation 
 %                      between subsequent states
+%  S                 : corresponding community structure
 %  varargin{1}       : function handle of random on A
 %  varargin{2}       : type of B, can be 'ordered', 'randomSliceConnection',
 %                      and 'randomSliceOrder'
